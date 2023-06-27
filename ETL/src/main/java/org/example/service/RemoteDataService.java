@@ -62,11 +62,11 @@ public class RemoteDataService {
 		}.getType();
 			
 		Integer ultimatraza =  ultimaTraza();
-		System.out.println(ultimatraza);
+		//System.out.println(ultimatraza);
 		// Recorremos cada objeto y usamos el id para acceder a la traza
 		for (Iterator<Travel> iterator = travels.iterator(); iterator.hasNext();) {
 			Travel travel = (Travel) iterator.next();
-			System.out.println(travel.getId());
+			//System.out.println(travel.getId());
 			if (travel.getId() > 29 && ultimatraza < travel.getId()) {
 				// accedemos a la traza y guardamos su json
 				response = Unirest.get(URLTraza + travel.getId()).header("authorization", "bearer " + TOKEN).asString();
@@ -78,7 +78,6 @@ public class RemoteDataService {
 				List<Bumps> bumps = travelsCompleto.get(0).getBumps();
 				List<TrackPoint> tp = new ArrayList<>();
 				if (acceletarions != null && locations != null && locations.size()>1){
-					System.out.println("LLegue");
 					// Para cada localización
 					for (int i = 0; i < locations.size(); i++) {
 						List<Measure> measures = new ArrayList<>();

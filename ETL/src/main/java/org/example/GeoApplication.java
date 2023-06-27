@@ -21,10 +21,10 @@ public class GeoApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		long startTime = System.nanoTime();
+		//long startTime = System.nanoTime();
 		remoteDataService.getDataFromRemote();
-		long endTime = System.nanoTime() - startTime;
-		System.out.println("Tiempo:" + endTime/1e6/1000);
+		//long endTime = System.nanoTime() - startTime;
+		//System.out.println("Tiempo:" + endTime/1e6/1000);
 		
 	}
 	

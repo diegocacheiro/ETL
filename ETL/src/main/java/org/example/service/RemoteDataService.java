@@ -190,17 +190,17 @@ public class RemoteDataService {
 					for (int j = 0; j < tp.size(); j++) {
 						try {
 							trackPointService.save(tp.get(j));
-							System.out.println(travel.getId() + " - Traza añadida");
+							//System.out.println(travel.getId() + " - Traza añadida");
 						} catch (Exception e) {
 							System.out.println(e);
 						}
 					}
 				} else {
-					System.out.println(travel.getId() + " - Traza no válida");
+					//System.out.println(travel.getId() + " - Traza no válida");
 				}
 				
 			} else {
-				System.out.println(travel.getId() + " - Traza existente");
+				//System.out.println(travel.getId() + " - Traza existente");
 			}
 		}
 	}

@@ -25,13 +25,15 @@ public class GeoApplication implements CommandLineRunner {
 		remoteDataService.getDataFromRemote();
 		//long endTime = System.nanoTime() - startTime;
 		//System.out.println("Tiempo:" + endTime/1e6/1000);
+		System.out.println("ETL finalizada con éxito");
 		
 	}
 	
-	@Scheduled(initialDelay = 60000, fixedRate = 60000) // Ejecutar cada 5 segundos
+	@Scheduled(initialDelay = 300000, fixedRate = 300000) // Ejecutar cada 5 segundos
     public void executeScheduledTask() {
         try {
             run();
+            System.out.println("ETL finalizada con éxito");
         } catch (Exception e) {
             // Manejar cualquier excepción
             e.printStackTrace();
